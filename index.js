@@ -62,18 +62,27 @@ function novaJogada() {
 }
 
 function acenderBotao(valor) {
+    var audio = new Audio();
     switch (valor) {
         case 1:
             document.getElementById('1').style.backgroundColor = "#3232ff";
+            audio.src = "audio/botao1.mp3";
+            audio.play();
             break;
         case 2:
             document.getElementById('2').style.backgroundColor = "#ff3232";
+            audio.src = "audio/botao2.mp3";
+            audio.play();
             break;
         case 3:
             document.getElementById('3').style.backgroundColor = "#ffff32";
+            audio.src = "audio/botao3.mp3";
+            audio.play();
             break;
         case 4:
             document.getElementById('4').style.backgroundColor = "#329932";
+            audio.src = "audio/botao4.mp3";
+            audio.play();
             break;
         default:
             document.getElementById('1').style.backgroundColor = "#3232ff";
