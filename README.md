@@ -15,4 +15,4 @@ Genius era um brinquedo muito popular na década de 1980 distribuído pela Brinq
 
 ## 📌 Anexos
 
-<img src="./icone.png">
+<img src="imagem/icone.png">
