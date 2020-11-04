@@ -13,20 +13,7 @@ function capturaDados(valor) {
     setTimeout(apagarBotao, 200);
 
     if (computador[jogadaAtual] != jogador[jogadaAtual]) {
-        Swal.fire({
-            title: 'Game Over!',
-            html: '<div>Pontos: ' + pontos + '</div>',
-            type: 'error'
-        });
-
-        if (pontos > pontosMax) {
-            pontosMax = pontos;
-            document.getElementById("maximo").innerHTML = 'Maximo: ' + pontosMax;
-        }
-
-        setTimeout(acenderBotao, 200);
-        desabilitarClick();
-        zerarDados();
+        gameOver();
     }
 
     jogadaAtual++;
@@ -57,7 +44,7 @@ function novaJogada() {
     });
     setTimeout(habilitarClick, tempo*1000+500);
 
-    console.log(computador)
+    //console.log(computador)
     index++;
 }
 
@@ -118,6 +105,23 @@ function zerarDados() {
     computador = [];
     index = 0;
     pontos = 0;
+}
+
+function gameOver() {
+    Swal.fire({
+        title: 'Game Over!',
+        html: '<div>Pontos: ' + pontos + '</div>',
+        type: 'error'
+    });
+
+    if (pontos > pontosMax) {
+        pontosMax = pontos;
+        document.getElementById("maximo").innerHTML = 'Maximo: ' + pontosMax;
+    }
+
+    setTimeout(acenderBotao, 200);
+    desabilitarClick();
+    zerarDados();
 }
 
 function novoJogo() {
